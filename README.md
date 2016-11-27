@@ -27,7 +27,7 @@ Set the required bar length by pressing `Shift` and a choice of `R` button simul
 ![image](BarLength.jpg)
 
 #### Recording
-Pressing the circular record button will "punch in" on the beat so pressing it early gives you time to get your hands ready on the guitar/bass or whatever before recording actually starts. Also, the recording will automatically "punch out" or stop at the end of the chosen number of bars.
+Pressing the circular record button will "punch in" on the first beat of the next bar so pressing it early gives you time to get your hands ready on the guitar/bass or whatever before recording actually starts. Also, the recording will automatically "punch out" or stop at the end of the chosen number of bars.
 
 If you mess up a take (and I do this a lot) then just hit the `undo` button and try record again until you achieve perfection.
 
