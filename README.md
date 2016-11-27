@@ -45,3 +45,5 @@ To install this MIDI Remote Script do the following
 ![image](Preferences.jpg)
 
  
+### Implementation notes
+This code is a tweaked version of existing scripts used for Mackie Control surfaces.  
