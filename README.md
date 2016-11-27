@@ -22,13 +22,14 @@ I normally have Live's Session view playing constantly with the metronome runnin
 ##### Preparing to record
 As is common, press an `R` button to select which track you will record into (unlike the photo, only one `R` is ever lit up at once to denote which track is armed for record).
 
-Set the required bar length by pressing `Shift` and a choice of `R` button simultaneously. The first `R` button is for recording a 1 bar loop, the second `R` button for recording a 2 bar loop and so on. Pressing these buttons does not start recording it only sets how many bars will be recorded when the circular record button. The chosen number of bars is updated in the track label:
+Set the required bar length by pressing `Shift` and a choice of `R` button simultaneously. The first `R` button is for recording a 1 bar loop, the second `R` button for recording a 2 bar loop and so on. Pressing these buttons does not start recording it only sets how many bars will be recorded when the circular record button is pressed. The chosen number of bars is updated in the track label:
+
 ![image](BarLength.jpg)
 
 #### Recording
 Pressing the circular record button will "punch in" on the beat so pressing it early gives you time to get your hands ready on the guitar/bass or whatever before recording actually starts. Also, the recording will automatically "punch out" or stop at the end of the chosen number of bars.
 
-If you mess up a take (and I do this a lot) then just hit the undo button and try record again until you achieve perfection.
+If you mess up a take (and I do this a lot) then just hit the `undo` button and try record again until you achieve perfection.
 
 #### Other features
 The previous-next scene keys will switch to the required scene at the end of the current bar.
