@@ -1,5 +1,5 @@
 #Embedded file name: /Users/versonator/Hudson/live/Projects/AppLive/Resources/MIDI Remote Scripts/MackieControl/MainDisplay.py
-from MHControlComponent import *
+from .MHControlComponent import *
 
 class MainDisplay(MHControlComponent):
     """ Representing one main 2 row display of a Mackie Control or Extension

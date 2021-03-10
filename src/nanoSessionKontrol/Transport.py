@@ -1,5 +1,5 @@
 #Embedded file name: /Users/versonator/Hudson/live/Projects/AppLive/Resources/MIDI Remote Scripts/MackieControl/Transport.py
-from MHControlComponent import *
+from .MHControlComponent import *
 
 
 class Transport(MHControlComponent):
@@ -133,7 +133,7 @@ class Transport(MHControlComponent):
             if value == BUTTON_PRESSED:
 #MH                self.__jump_to_prev_cue()
 #MH see                http://stackoverflow.com/questions/4020027/debugging-python-within-ableton-live
-                print 'MH From prev - prev scene shift'
+                print('MH From prev - prev scene shift')
                 if self.shift_is_pressed():
                     #self.song().view.selected_scene.fire_as_selected() #MH
                     self.song().view.selected_scene.fire() #MH
@@ -145,7 +145,7 @@ class Transport(MHControlComponent):
         elif switch_id == SID_MARKER_FROM_NEXT:
             if value == BUTTON_PRESSED:
 #MH                self.__jump_to_next_cue()
-                print "MH From next - next scene"
+                print("MH From next - next scene")
                 if self.shift_is_pressed():
                     #self.song().view.selected_scene.fire_as_selected() #MH
                     self.song().view.selected_scene.fire() #MH
@@ -155,29 +155,29 @@ class Transport(MHControlComponent):
                     self.song().view.selected_scene = self.song().scenes[new_index]
         elif switch_id == SID_MARKER_LOOP:
             if value == BUTTON_PRESSED:
-                print "MH cycle"
+                print("MH cycle")
 #MH                self.__toggle_loop()
                 self.__toggle_metronome()
         elif switch_id == SID_MARKER_PI:
             if value == BUTTON_PRESSED:
-                print "MH marker PI"
+                print("MH marker PI")
                 if self.control_is_pressed():
                     self.__set_loopstart_from_cur_position()
                 else:
                     self.__toggle_punch_in()
         elif switch_id == SID_MARKER_PO:
-            print "MH marker PO"
+            print("MH marker PO")
             if value == BUTTON_PRESSED:
                 if self.control_is_pressed():
                     self.__set_loopend_from_cur_position()
                 else:
                     self.__toggle_punch_out()
         elif switch_id == SID_MARKER_HOME:
-            print "MH marker HOME"
+            print("MH marker HOME")
             if value == BUTTON_PRESSED:
                 self.__goto_home()
         elif switch_id == SID_MARKER_END:
-            print "MH marker END"
+            print("MH marker END")
             if value == BUTTON_PRESSED:
                 self.__goto_end()
 

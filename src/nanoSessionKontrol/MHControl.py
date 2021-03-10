@@ -1,13 +1,13 @@
 #Embedded file name: /Users/versonator/Hudson/live/Projects/AppLive/Resources/MIDI Remote Scripts/MackieControl/MackieControl.py
 import re
-from consts import *
-from MainDisplay import MainDisplay
-from MainDisplayController import MainDisplayController
-from TimeDisplay import TimeDisplay
-from ChannelStrip import ChannelStrip, MasterChannelStrip
-from ChannelStripController import ChannelStripController
-from SoftwareController import SoftwareController
-from Transport import Transport
+from .consts import *
+from .MainDisplay import MainDisplay
+from .MainDisplayController import MainDisplayController
+from .TimeDisplay import TimeDisplay
+from .ChannelStrip import ChannelStrip, MasterChannelStrip
+from .ChannelStripController import ChannelStripController
+from .SoftwareController import SoftwareController
+from .Transport import Transport
 import Live
 import MidiRemoteScript
 
@@ -55,7 +55,7 @@ class MHControl:
         """Called by the Application as soon as all scripts are initialized.
            You can connect yourself to other running scripts here, as we do it
            connect the extension modules (MackieControlXTs).
-        """
+        
         try:
             from MackieControlXT.MackieControlXT import MackieControlXT
         except:
@@ -77,6 +77,8 @@ class MHControl:
         #raise found_self or AssertionError
         self.__main_display_controller.set_controller_extensions(left_extensions, right_extensions)
         self.__channel_strip_controller.set_controller_extensions(left_extensions, right_extensions)
+	"""
+        pass
 
     def application(self):
         """returns a reference to the application that we are running in"""
@@ -139,7 +141,7 @@ class MHControl:
             if note in range(SID_FIRST, SID_LAST + 1):
                 if note in display_switch_ids:
                     self.__handle_display_switch_ids(note, value)
-                if note in channel_strip_switch_ids + fader_touch_switch_ids:
+                if note in list(channel_strip_switch_ids) + list(fader_touch_switch_ids):
                     for s in self.__channel_strips:
                         s.handle_channel_strip_switch_ids(note, value)
 

@@ -1,7 +1,7 @@
 #Embedded file name: /Users/versonator/Hudson/live/Projects/AppLive/Resources/MIDI Remote Scripts/MackieControl/ChannelStrip.py
 from itertools import chain
 
-from MHControlComponent import *
+from .MHControlComponent import *
 
 
 class ChannelStrip(MHControlComponent):

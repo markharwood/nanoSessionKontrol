@@ -1,5 +1,5 @@
 #Embedded file name: /Users/versonator/Hudson/live/Projects/AppLive/Resources/MIDI Remote Scripts/MackieControl/MackieControlComponent.py
-from consts import *
+from .consts import *
 import Live
 
 class MHControlComponent:

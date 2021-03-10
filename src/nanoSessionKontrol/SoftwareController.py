@@ -1,5 +1,5 @@
 #Embedded file name: /Users/versonator/Hudson/live/Projects/AppLive/Resources/MIDI Remote Scripts/MackieControl/SoftwareController.py
-from MHControlComponent import *
+from .MHControlComponent import *
 
 class SoftwareController(MHControlComponent):
     """Representing the buttons above the transport, including the basic: """

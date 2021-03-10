@@ -1,7 +1,7 @@
 #Embedded file name: /Users/versonator/Hudson/live/Projects/AppLive/Resources/MIDI Remote Scripts/MackieControl/ChannelStripController.py
 from itertools import chain
 
-from MHControlComponent import *
+from .MHControlComponent import *
 from _Generic.Devices import *
 
 
@@ -180,7 +180,7 @@ class ChannelStripController(MHControlComponent):
                 self.__switch_to_next_page()
         elif switch_id == SID_FADERBANK_PREV_BANK:
             if value == BUTTON_PRESSED:
-                    print 'Previous scene'
+                    print('Previous scene')
                     self.song().undo() #MH
 #MH                if self.shift_is_pressed():
 #MH                    self.__set_channel_offset(0)
@@ -188,7 +188,7 @@ class ChannelStripController(MHControlComponent):
 #MH                    self.__set_channel_offset(self.__strip_offset() - len(self.__channel_strips))
         elif switch_id == SID_FADERBANK_NEXT_BANK:
             if value == BUTTON_PRESSED:
-                print 'Next scene'
+                print('Next scene')
                 self.song().redo() #MH
 #MH                if self.shift_is_pressed():
 #MH                    last_possible_offset = (self.__controlled_num_of_tracks() - self.__strip_offset()) / len(self.__channel_strips) * len(self.__channel_strips) + self.__strip_offset()
@@ -241,7 +241,7 @@ class ChannelStripController(MHControlComponent):
             pass
         else:
             channel_strip = self.__channel_strips[stack_offset + strip_index]
-            raise not channel_strip.assigned_track() or not channel_strip.assigned_track().has_audio_output or AssertionError, 'in every other mode, the midimap should handle the messages'
+            raise not channel_strip.assigned_track() or not channel_strip.assigned_track().has_audio_output or AssertionError('in every other mode, the midimap should handle the messages')
 
     def handle_fader_touch(self, strip_offset, stack_offset, touched):
         """ forwarded to us by the channel_strips """

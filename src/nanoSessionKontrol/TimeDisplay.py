@@ -1,5 +1,5 @@
 #Embedded file name: /Users/versonator/Hudson/live/Projects/AppLive/Resources/MIDI Remote Scripts/MackieControl/TimeDisplay.py
-from MHControlComponent import *
+from .MHControlComponent import *
 
 class TimeDisplay(MHControlComponent):
     """Represents the Mackie Controls Time-Display, plus the two LED's that show the"""
