@@ -1,5 +1,5 @@
 #Embedded file name: /Users/versonator/Hudson/live/Projects/AppLive/Resources/MIDI Remote Scripts/MackieControl/MainDisplayController.py
-from MHControlComponent import *
+from .MHControlComponent import *
 
 class MainDisplayController(MHControlComponent):
     """ Controlling all available main displays (the display above the channel strips),
@@ -116,7 +116,7 @@ class MainDisplayController(MHControlComponent):
                     upper_string += ' '
                     if self.__parameters and self.__parameters[strip_index]:
                         if self.__parameters[strip_index][0]:
-                            lower_string += self.__generate_6_char_string(unicode(self.__parameters[strip_index][0]))
+                            lower_string += self.__generate_6_char_string(str(self.__parameters[strip_index][0]))
                         else:
                             lower_string += self.__generate_6_char_string('')
                     elif self.__channel_strip_strings and self.__channel_strip_strings[strip_index]:
